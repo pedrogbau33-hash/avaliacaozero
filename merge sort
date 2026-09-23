@@ -1,0 +1,33 @@
+void intercalar(array[], int inicio1, int inicio2, int fim2) {
+    int fim1 = inicio2 - 1;
+    int i = inicio1;
+    int j = inicio2;
+    int k = 0;
+    while (i <= fim1 && j <= fim2) {
+        if (array[i] <= array[j]) {
+            tmp[k] = array[i];
+            i++;
+        }
+        else {
+            tmp[k] = array[j];
+            j++;
+        }
+        k++;
+    }
+    while (i <= fim1) {
+      tmp[k] = i; //tmp [k] = array[i]
+      i++;
+      k++;
+    }
+    while (j <= fim2) {
+      tmp[k] = array[j];
+      j++;
+      k++;
+
+void mergeSort (int array[], int esquerda,  int direita) {
+  if (esquerda > direita) {
+    int meio = (esquerda + direita)/2;
+    mergeSort(array[], esquerda, meio);
+    mergeSort(array[], meio+1, direita);
+    intercalar(array[], esquerda, meio+1, direita);
+}
