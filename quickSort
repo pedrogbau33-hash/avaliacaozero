@@ -1,0 +1,18 @@
+particionar(array[], int esquerda, int direita) {
+int pivo = arr[direita]
+int pfp = esquerda - 1
+
+for (int i = 0; i < direita-1; i++) {
+if (array[i] <= pivo) {
+pfp++;
+swap (arr[pfp], arr[i]) }
+}
+swap (arr[pfp+1], arr[direita]);
+return pfp + 1;
+}
+quickSort(array[], int esquerda, int direita) {
+if (esquerda < direita) {
+i_pivo = particionar(array[], int esquerda, int direita);
+quickSort(array[], esquerda, i_pivo - 1);
+quickSort(array[], i_pivo + 1, direita);
+} }
