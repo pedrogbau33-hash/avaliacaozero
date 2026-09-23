@@ -1,0 +1,18 @@
+int buscaBinaria(int array[], int esquerda, int direita, int chave) //lembrar de declarar e definir elemento e valor
+{
+if (esquerda > direita) {
+return -1; 
+}
+int meio = (esquerda + direita) / 2;
+if (chave < array[meio]) { //lembrar de nao fazer chave < meio
+return buscaBinaria(array[], esquerda, meio-1, chave); //lembrar de passar chave na recursao
+}
+else if (chave > array[meio]) {
+return buscaBinaria(array[], meio+1, direita, chave);
+}
+else { return meio;
+}
+	return -1;
+}
+tamanho = sizeof(array)/sizeof(int)
+tamanho-1
