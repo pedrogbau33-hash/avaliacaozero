@@ -1,0 +1,26 @@
+#include <iostream>
+
+int buscarRaiz(int N, int esquerda, int direita) {
+if (N == 1) {
+return 1; }
+if (N == 0) {
+return 0; }
+if (N < 0) {
+return -1; }
+
+if (esquerda > direita) {
+return direita; }
+int meio = (esquerda + direita)/2;
+if (meio * meio = N) {
+return meio; }
+if (meio * meio < N) {
+return buscarRaiz(N, meio+1, direita);
+}
+if (meio * meio > N) {
+return buscarRaiz(N, esquerda, meio-1);
+}
+
+int raizQuadradaInteira(int N){
+return buscarRaiz(N, 0, N);
+}
+
