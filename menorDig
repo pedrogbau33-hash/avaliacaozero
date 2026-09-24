@@ -1,8 +1,8 @@
 int primeiroDig(int N) {
-int primeiro = N / 10;
-if (primeiro >= 10) {
-return primeiroDig(primeiro);
-return primeiro;
+if (N < 10) {
+return N;
+}
+return primeiroDig(N / 10);
 
 int menorDigito(N) {
 if (N < 10) {
