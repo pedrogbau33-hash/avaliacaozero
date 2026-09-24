@@ -1,0 +1,14 @@
+bool verificarSequencia(int N) {
+    if (N < 10) {
+        return false;
+    }
+
+    int ultDig = N % 10;
+    int antDig = (N / 10) % 10;
+
+    if (ultDig == antDig) {
+        return true;
+    }
+
+    return verificarSequencia(N / 10);
+}
