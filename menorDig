@@ -1,0 +1,16 @@
+int primeiroDig(int N) {
+int primeiro = N / 10;
+if (primeiro >= 10) {
+return primeiroDig(primeiro);
+return primeiro;
+
+int menorDigito(N) {
+if (N < 10) {
+return N; 
+}
+int resto = N % 10; 
+primeiroDig(N);
+if (primeiro < resto) {
+return primeiro;
+}
+return resto;
